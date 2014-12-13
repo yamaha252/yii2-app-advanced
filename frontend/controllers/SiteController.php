@@ -67,6 +67,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $this->view->changeTheme('mobile');
         return $this->render('index');
     }
 

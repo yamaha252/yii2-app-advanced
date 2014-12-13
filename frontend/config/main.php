@@ -28,6 +28,26 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'view' => [
+            'class' => 'frontend\components\View',
+            'defaultTheme' => 'desktop',
+            'themes' => [
+                'desktop' => [
+                    'pathMap' => [
+                        '@app/views' => '@app/themes/desktop',
+                        '@app/widgets/views' => '@app/themes/desktop/widgets'
+                    ],
+                    'baseUrl' => '@web/themes/desktop',
+                ],
+                'mobile' => [
+                    'pathMap' => [
+                        '@app/views' => '@app/themes/mobile',
+                        '@app/widgets/views' => '@app/themes/mobile/widgets'
+                    ],
+                    'baseUrl' => '@web/themes/mobile',
+                ]
+            ],
+        ],
     ],
     'params' => $params,
 ];
